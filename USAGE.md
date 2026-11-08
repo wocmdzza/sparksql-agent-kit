@@ -40,6 +40,14 @@
 └─ <你自己的 .sql 脚本目录>
 ```
 
+## 一之二、从公开仓 copy 后先还原
+
+从 GitHub 公开仓拿到的是脱敏版。copy 到公司电脑后，先按根目录
+`RESTORE.md` 的约定还原成本地真实版再用：A 类还原词全局替换、
+B 类 `{{...}}` 占位符逐个替换（可用 `scripts/restore_placeholders.py`
++ 只存本地的映射文件批量做）、C 类模板（表卡/UDF 等）就地填。
+公开版放只读参照目录、真实内容只填在项目目录里，不要互相覆盖。
+
 ## 二、第一次用之前要填什么（按顺序，填多少用多少）
 
 1. `docs/sparksql-style.md`：分区已定版（pt_d=yyyyMMdd 运行周期日期、pt_h=HH、多级按 pt_d/pt_h/device_type，device_type 已知 Phone/Tablet/Vision、全量待补），排版只定关键字小写 + 字段前逗号两条，其余暂不设置、保持现状——不要再按旧版“逐项确认按默认”来填。

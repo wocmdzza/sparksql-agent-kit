@@ -19,6 +19,7 @@
 | `templates/script-header.md` | 正式脚本注释头占位：仅 `@Modify` 规则已确认，全文模板待 使用者 提供 |
 | `templates/table-card.md` | 表卡片模板 |
 | `templates/logic-card.md` | 逻辑卡片模板 |
+| `prompts/` | 给内部 Agent 的现成提示词：按顺序生成盘点表、表卡、逻辑卡（见 `prompts/README.md`） |
 | `templates/pilot-inventory.md` | 试点盘点表：按产出表填 20–30 个核心脚本，填完再跑提取器 |
 
 ## 在公司内网跑试点（第 1 步）
